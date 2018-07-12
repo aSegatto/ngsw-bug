@@ -25,6 +25,7 @@ export class AppComponent {
       this.result = 'success';
     }, (error) => {
       this.result = 'failed with error: ' + error.message;
+      console.error(error);
     });
   }
 
