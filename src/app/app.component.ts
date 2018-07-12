@@ -23,7 +23,7 @@ export class AppComponent {
     firebase.storage().ref('blob').put(blob, metadata).then(() => {
       this.result = 'success';
     }, (error) => {
-      this.result = 'fail' + error;
+      this.result = 'failed with error: ' + error.message;
     });
   }
 
