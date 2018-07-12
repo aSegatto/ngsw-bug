@@ -16,7 +16,8 @@ export class AppComponent {
 
   onUpload() {
     this.result = '';
-    const blob = new Blob(['This is my blob content'], {type: 'text/plain'});
+    const content = 'This is my blob content ' + new Date();
+    const blob = new Blob([content], {type: 'text/plain'});
     const metadata = {
       'contentType': blob.type
     };
